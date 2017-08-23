@@ -44,7 +44,7 @@ require 'scraperwiki/simple_html_dom.php';
 				echo $Link	=	$element->find("//*[@id='navDet']/a", 0);
 				}
 			}
-		}
+		}}
 	
 ?>
 
