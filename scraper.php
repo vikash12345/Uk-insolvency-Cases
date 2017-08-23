@@ -44,14 +44,15 @@ require 'scraperwiki/simple_html_dom.php';
 					$Link	=	$element->find('a[id="navDet"]', 0)->href;
 					$newlink = 'https://www.insolvencydirect.bis.gov.uk/eiir/' . $Link;
 				$DetailPg				=	file_get_html($newlink);
-				 echo $info['Surname']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[1]/td[2]",0)->plaintext;				
-				 $info['Forename']  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[2]/td[2]",0)->plaintext;
+					if($DetailPg){
+				 echo $info['Surname']  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[1]/td[2]",0)->plaintext;				
+				 $info['Forename']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[2]/td[2]",0)->plaintext;
 				 $info['Title'] 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[3]/td[2]",0)->plaintext;
 				 $info['Gender']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[4]/td[2]",0)->plaintext;
-				 $info['Occupation'] 					= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[5]/td[2]",0)->plaintext;
-				 $info['DOB']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[6]/td[2]",0)->plaintext;
-				 $info['Last_Known_Address']  				= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[7]/td[2]",0)->plaintext;
-				 $info['Case_Name']  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[1]/td[2]",0)->plaintext;
+				 $info['Occupation'] 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[5]/td[2]",0)->plaintext;
+				 $info['DOB']  							= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[6]/td[2]",0)->plaintext;
+				 $info['Last_Known_Address']  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[7]/td[2]",0)->plaintext;
+				 $info['Case_Name']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[1]/td[2]",0)->plaintext;
 				 $info['Court']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[2]/td[2]",0)->plaintext;
 				 $info['Type']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[4]/td[2]",0)->plaintext;
 				 $info['Number'] 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[5]/td[2]",0)->plaintext;
@@ -95,7 +96,7 @@ require 'scraperwiki/simple_html_dom.php';
 													'Address2'=> $info['Address2'],
 													'Post_Code2' => $info['Post_Code2'],													
 													'Telephone2' => $info['Telephone2'] 
-													));
+													));}
 
     
   //clean out the dom
