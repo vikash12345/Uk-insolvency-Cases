@@ -42,7 +42,8 @@ require 'scraperwiki/simple_html_dom.php';
 				$RowNumb	+=	1;
 				if ($RowNumb != 0) {
 					echo $Link	=	$element->find('a[id="navDet"]', 0)->href;
-					echo	'<br/>';
+					$DetailPg	=	file_get_html($Link);
+					echo $DetailPg;
 				}
 			}
 		}}
