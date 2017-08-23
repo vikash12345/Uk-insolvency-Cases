@@ -7,13 +7,13 @@ require 'scraperwiki/simple_html_dom.php';
 	for($page = 1; $page < 3; $page++){
 		$FinalURL	=	$site . $page .'&surnamesearch=A&forenamesearch=ALLFORENAMES&OPTION=NAME&tradingnamesearch=';
 		$Html		=	file_get_html($FinalURL);
-    		$RowNumb	=	-1;
+    		$Flag	=	-1;
 
 		if ($Html) {
 
 			foreach ($Html->find("//*[@id='MyTable']/tbody/tr/td") as $element) {
-				$RowNumb	+=	1;
-				if ($RowNumb != 0) {
+				$Flag	+=	1;
+				if ($Flag != 0) {
 				$Link	=	$element->find('a[id="navDet"]', 0)->href;
 				$newlink = 'https://www.insolvencydirect.bis.gov.uk/eiir/' . $Link;
 				$DetailPg				=	file_get_html($newlink);
