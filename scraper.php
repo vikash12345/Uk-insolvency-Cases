@@ -31,7 +31,7 @@ require 'scraperwiki/simple_html_dom.php';
 
 	$site = 'https://www.insolvencydirect.bis.gov.uk/eiir/IIRSearchNames.asp?court=ALL&CourtName=&Office=&OfficeName=&page=';
 	//This is for Pagination 
-	for($page = 1; $page < 10; $page++){
+	for($page = 1; $page < 4; $page++){
 		$FinalURL	=	$site . $page .'&surnamesearch=A&forenamesearch=ALLFORENAMES&OPTION=NAME&tradingnamesearch=';
 		$Html		=	file_get_html($FinalURL);
     		$RowNumb	=	-1;
@@ -72,7 +72,9 @@ require 'scraperwiki/simple_html_dom.php';
 				echo $Telephone2  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[21]/td[2]",0)->plaintext;
 							
 					
-scraperwiki::save_sqlite(array('name'), array(name => $Surname, 
+
+				}
+				scraperwiki::save_sqlite(array('name'), array(name => $Surname, 
 													Forename=> $Forename , 
 													Title => $Title, 
 													Gender => $Gender, 
@@ -102,7 +104,6 @@ scraperwiki::save_sqlite(array('name'), array(name => $Surname,
     
   //clean out the dom
  $DetailPg->__destruct();}
-				}
 			}
 		}}
 	
