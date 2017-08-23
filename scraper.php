@@ -102,7 +102,7 @@ require 'scraperwiki/simple_html_dom.php';
     ));
     
   //clean out the dom
-  $link2->__destruct();
+ $DetailPg->__destruct();
 				}
 			}
 		}}
