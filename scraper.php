@@ -24,4 +24,21 @@
 // All that matters is that your final data is written to an SQLite database
 // called "data.sqlite" in the current working directory which has at least a table
 // called "data".
+
+<?php
+require 'scraperwiki.php';
+require 'scraperwiki/simple_html_dom.php';
+
+	$site = 'https://www.insolvencydirect.bis.gov.uk/eiir/IIRSearchNames.asp?court=ALL&CourtName=&Office=&OfficeName=&page=';
+	//This is for Pagination 
+	for($page = 1; $page < 2; $page++){
+		$FinalURL	=	$site . $page .'&surnamesearch=A&forenamesearch=ALLFORENAMES&OPTION=NAME&tradingnamesearch=';
+		$Html		=	file_get_html($FinalURL);
+    echo 	$Html;
+		
+			}
+		}
+	}
+?>
+
 ?>
