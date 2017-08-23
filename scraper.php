@@ -41,7 +41,7 @@ require 'scraperwiki/simple_html_dom.php';
 			foreach ($Html->find("//*[@id='MyTable']/tbody") as $element) {
 				$RowNumb	+=	1;
 				if ($RowNumb != 0) {
-					echo $Link	=	$element->find('//*[@id='MyTable']/tbody/tr[1]/tr[2]', 0)->href;
+					echo $Link	=	$element->find('tr[1]/td[2]', 0)->href;
 				}
 			}
 		}}
