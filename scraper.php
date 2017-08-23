@@ -42,7 +42,8 @@ require 'scraperwiki/simple_html_dom.php';
 				$RowNumb	+=	1;
 				if ($RowNumb != 0) {
 					echo $Link	=	$element->find('a[id="navDet"]', 0)->href;
-					$DetailPg	=	file_get_html($Link);
+					$newlink = 'https://www.insolvencydirect.bis.gov.uk/eiir/' . $Link;
+					$DetailPg	=	file_get_html($newlink);
 					echo $DetailPg;
 				}
 			}
