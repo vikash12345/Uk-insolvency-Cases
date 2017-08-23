@@ -44,8 +44,7 @@ require 'scraperwiki/simple_html_dom.php';
 					$Link	=	$element->find('a[id="navDet"]', 0)->href;
 					$newlink = 'https://www.insolvencydirect.bis.gov.uk/eiir/' . $Link;
 				$DetailPg				=	file_get_html($newlink);
-				echo $Surname  					= $DetailPg->find("/*[@id='frmCaseDetail']/table[2]/tbody/tr[1]td[2]",0)->plaintext;;
-				
+echo $Surname  					= $DetailPg->find("/*[@id='frmCaseDetail']/table[2]/tbody/tr[1]td[2]",0)->plaintext;				
 					
 					
 					
