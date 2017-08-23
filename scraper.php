@@ -24,7 +24,7 @@ require 'scraperwiki/simple_html_dom.php';
 				 $Occupation 					= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[5]/td[2]",0)->plaintext;
 				 $DOB  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[6]/td[2]",0)->plaintext;
 				 $Last_Known_Address  				= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[7]/td[2]",0)->plaintext;
-				 $Case_Name']  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[1]/td[2]",0)->plaintext;
+				 $Case_Name  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[1]/td[2]",0)->plaintext;
 				 $Court  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[2]/td[2]",0)->plaintext;
 				 $Type  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[4]/td[2]",0)->plaintext;
 				 $Number 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[5]/td[2]",0)->plaintext;
