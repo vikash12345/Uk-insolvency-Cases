@@ -73,7 +73,7 @@ require 'scraperwiki/simple_html_dom.php';
 					
 					
 					scraperwiki::save_sqlite(array('mci_snum','page'), 
-    array('mci_snum' => $page, 
+    array('mci_snum' => Surname, 
           'Surname' => (trim($Surname)), 
           'Forename' => (trim($Forename)),
           'Title' => (trim($Title)),
