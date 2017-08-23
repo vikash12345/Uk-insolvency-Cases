@@ -43,7 +43,7 @@ require 'scraperwiki/simple_html_dom.php';
 				if ($RowNumb != 0) {
 					$Link	=	$element->find('a[id="navDet"]', 0)->href;
 					$newlink = 'https://www.insolvencydirect.bis.gov.uk/eiir/' . $Link;
-					$DetailPg				=	file_get_html($newlink);
+				$DetailPg				=	file_get_html($newlink);
 				$Surname  					= $DetailPg->find("/*[@id='frmCaseDetail']/table[2]/tbody/tr[1]td[2]",0)->plaintext;;
 				$Forename  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[2]td[2]",0)->plaintext;;
 				$Title 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[3]td[2]",0)->plaintext;;
@@ -72,34 +72,7 @@ require 'scraperwiki/simple_html_dom.php';
 					
 					
 					
-echo scraperwiki::save_sqlite(array('Tel','Telephone2'), 
-    array('Telephone2' => Surname, 
-          'Surname' => (trim($Surname)), 
-          'Forename' => (trim($Forename)),
-          'Title' => (trim($Title)),
-          'Gender' => (trim($Gender)),
-          'Occupation' => (trim($Occupation)),
-          'DOB' => (trim($DOB)),
-          'Last_Known_Address' => (trim($Last_Known_Address)),
-          'Case_Name' => (trim($Case_Name)),
-          'Court' => (trim($Court)),
-			'Type' => (trim($Type)),
-			'Number' => (trim($Number)),
-          'Case_Year' => (trim($Case_Year)),
-			'Order_Date' => (trim($Order_Date)),
-			'Status' => (trim($Status)),
-          'Case_Description' => (trim($Case_Description)),
-			'Main_Insolvency_Practitioner' => (trim($Main_Insolvency_Practitioner)),
-			'Firm' => (trim($Firm)),
-          'Address' => (trim($Address)),
-			'Post_Code' => (trim($Post_Code)),
-			'Telephone' => (trim($Telephone)),
-			'Insolvency_Service_Office' => (trim($Insolvency_Service_Office)),
-			'Contact' => (trim($Contact)),
-			'Address2' => (trim($Address2)),
-			'Post_Code2' => (trim($Post_Code2)),
-			'Telephone2' => (trim($Telephone2))
-    ));
+scraperwiki::save_sqlite(array('DetailPg'), array('DetailPg' => $DetailPg,'Surname' => $Surname));
     
   //clean out the dom
  $DetailPg->__destruct();
