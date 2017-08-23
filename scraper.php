@@ -56,20 +56,21 @@ require 'scraperwiki/simple_html_dom.php';
 				 $info['Court']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[2]/td[2]",0)->plaintext;
 				 $info['Type']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[4]/td[2]",0)->plaintext;
 				 $info['Number'] 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[5]/td[2]",0)->plaintext;
-				 $info['Case_Year']  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[6]/td[2]",0)->plaintext;
-				 $info['Order_Date']  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[7]/td[2]",0)->plaintext;
+				 $info['Case_Year']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[6]/td[2]",0)->plaintext;
+				 $info['Order_Date']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[7]/td[2]",0)->plaintext;
 				 $info['Status'] 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[8]/td[2]",0)->plaintext;
-				 $info['Case_Description']  				= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[9]/td[2]",0)->plaintext;
-				 $info['Main_Insolvency_Practitioner']	  		= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[10]/td[2]",0)->plaintext;
-				 $info['Firm']						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[11]/td[2]",0)->plaintext;
+				 $info['Case_Description']  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[9]/td[2]",0)->plaintext;
+				 $info['Main_Insolvency_Practitioner']	  			= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[10]/td[2]",0)->plaintext;
+				 $info['Firm']							= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[11]/td[2]",0)->plaintext;
 				 $info['Address']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[12]/td[2]",0)->plaintext;
-				 $info['Post_Code']  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[13]/td[2]",0)->plaintext;
-				 $info['Telephone']  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[14]/td[2]",0)->plaintext;
-				 $info['Insolvency_Service_Office']  			= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[17]/td[2]",0)->plaintext;
-				 $info['Contact']  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[18]/td[2]",0)->plaintext;
-				 $info['Address2']  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[19]/td[2]",0)->plaintext;
-				 $info['Post_Code2'] 					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[20]/td[2]",0)->plaintext;
-				 $info['Telephone2']  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[21]/td[2]",0)->plaintext;
+				 $info['Post_Code']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[13]/td[2]",0)->plaintext;
+				 $info['Telephone']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[14]/td[2]",0)->plaintext;
+				 $info['Insolvency_Service_Office']  				= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[17]/td[2]",0)->plaintext;
+				 $info['Contact']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[18]/td[2]",0)->plaintext;
+				 $info['Address2']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[19]/td[2]",0)->plaintext;
+				 $info['Post_Code2'] 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[20]/td[2]",0)->plaintext;
+				 $info['Telephone2']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[21]/td[2]",0)->plaintext;
+						
 						scraperwiki::save_sqlite(array('name'), array(name => $info['Surname'], 
 													Forename=> $info['Forename'] , 
 													Title => $info['Title'], 
