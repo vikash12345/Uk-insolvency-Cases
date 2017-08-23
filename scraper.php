@@ -72,7 +72,7 @@ require 'scraperwiki/simple_html_dom.php';
 					
 					
 					
-scraperwiki::save_sqlite(array('DetailPg'), array('DetailPg' => $DetailPg,'Surname' => $Surname));
+scraperwiki::save_sqlite(array('name'), array('name' => $DetailPg,'Surname' => $Surname));
     
   //clean out the dom
  $DetailPg->__destruct();
