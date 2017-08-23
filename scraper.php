@@ -45,7 +45,7 @@ require 'scraperwiki/simple_html_dom.php';
 						
 						scraperwiki::save_sqlite(array('name'), array('name' => $info['Surname'], 
 													'Forename'=> $info['Forename'] , 
-													'Title' => $info['Title'], 
+													'Title' => $info['Title'] 
 													/*'Gender' => $info['Gender'], 
 													'Occupation' => $info['Occupation'], 
 													'DOB'=> $info['DOB'], 
