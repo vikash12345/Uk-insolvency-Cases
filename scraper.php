@@ -71,7 +71,8 @@ require 'scraperwiki/simple_html_dom.php';
 				echo $Telephone2  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[21]/td[2]",0)->plaintext;
 							
 					
-					
+			scraperwiki::save_sqlite(array('Surname'), array('Surname' => '$Surname', 'Forename' => '$Forename'));
+	
     
   //clean out the dom
  $DetailPg->__destruct();
