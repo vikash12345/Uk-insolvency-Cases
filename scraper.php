@@ -44,6 +44,7 @@ require 'scraperwiki/simple_html_dom.php';
 					$Link	=	$element->find('a[id="navDet"]', 0)->href;
 					$newlink = 'https://www.insolvencydirect.bis.gov.uk/eiir/' . $Link;
 				$DetailPg				=	file_get_html($newlink);
+					if($DetailPg){
 				echo $Surname  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[1]/td[2]",0)->plaintext;				
 				echo $Forename  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[2]/td[2]",0)->plaintext;
 				echo $Title 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[3]/td[2]",0)->plaintext;
@@ -100,7 +101,7 @@ scraperwiki::save_sqlite(array('name'), array(name => $Surname,
 
     
   //clean out the dom
- $DetailPg->__destruct();
+ $DetailPg->__destruct();}
 				}
 			}
 		}}
