@@ -45,7 +45,7 @@ require 'scraperwiki/simple_html_dom.php';
 					$newlink = 'https://www.insolvencydirect.bis.gov.uk/eiir/' . $Link;
 					$DetailPg				=	file_get_html($newlink);
 				$Surname  					= $DetailPg->find("/*[@id='frmCaseDetail']/table[2]/tbody/tr[1]td[2]",0)->plaintext;;
-				$Forename(s)  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[2]td[2]",0)->plaintext;;
+				$Forename  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[2]td[2]",0)->plaintext;;
 				$Title 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[3]td[2]",0)->plaintext;;
 				$Gender  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[4]td[2]",0)->plaintext;;
 				$Occupation 					= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[5]td[2]",0)->plaintext;;
@@ -75,7 +75,7 @@ require 'scraperwiki/simple_html_dom.php';
 					scraperwiki::save_sqlite(array('mci_snum','page'), 
     array('mci_snum' => $page, 
           'Surname' => (trim($Surname)), 
-          'Forename(s)' => (trim($Forename(s))),
+          'Forename' => (trim($Forename)),
           'Title' => (trim($Title)),
           'Gender' => (trim($Gender)),
           'Occupation' => (trim($Occupation)),
