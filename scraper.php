@@ -31,7 +31,7 @@ require 'scraperwiki/simple_html_dom.php';
 
 	$site = 'https://www.insolvencydirect.bis.gov.uk/eiir/IIRSearchNames.asp?court=ALL&CourtName=&Office=&OfficeName=&page=';
 	//This is for Pagination 
-	for($page = 1; $page < 10; $page++){
+	for($page = 1; $page < 3; $page++){
 		$FinalURL	=	$site . $page .'&surnamesearch=A&forenamesearch=ALLFORENAMES&OPTION=NAME&tradingnamesearch=';
 		$Html		=	file_get_html($FinalURL);
     		$RowNumb	=	-1;
@@ -42,10 +42,9 @@ require 'scraperwiki/simple_html_dom.php';
 				$RowNumb	+=	1;
 				if ($RowNumb != 0) {
 					$Link	=	$element->find('a[id="navDet"]', 0)->href;
-					$newlink = 'https://www.insolvencydirect.bis.gov.uk/eiir/' . $Link;
-				$DetailPg				=	file_get_html($newlink);
-					if($DetailPg){
-				echo $info['Surname']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[1]/td[2]",0)->plaintext;				
+					// $newlink = 'https://www.insolvencydirect.bis.gov.uk/eiir/' . $Link;
+				$DetailPg				=	file_get_html($Link);
+				 echo $info['Surname']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[1]/td[2]",0)->plaintext;				
 				 $info['Forename']  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[2]/td[2]",0)->plaintext;
 				 $info['Title'] 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[3]/td[2]",0)->plaintext;
 				 $info['Gender']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[4]/td[2]",0)->plaintext;
@@ -100,7 +99,7 @@ require 'scraperwiki/simple_html_dom.php';
 
     
   //clean out the dom
- $DetailPg->__destruct();}		
+ $DetailPg->__destruct();		
 					
 
 				}
