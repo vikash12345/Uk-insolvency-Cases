@@ -42,8 +42,8 @@ require 'scraperwiki/simple_html_dom.php';
 				$RowNumb	+=	1;
 				if ($RowNumb != 0) {
 					$Link	=	$element->find('a[id="navDet"]', 0)->href;
-					// $newlink = 'https://www.insolvencydirect.bis.gov.uk/eiir/' . $Link;
-				$DetailPg				=	file_get_html($Link);
+					$newlink = 'https://www.insolvencydirect.bis.gov.uk/eiir/' . $Link;
+				$DetailPg				=	file_get_html($newlink);
 				 echo $info['Surname']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[1]/td[2]",0)->plaintext;				
 				 $info['Forename']  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[2]/td[2]",0)->plaintext;
 				 $info['Title'] 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[3]/td[2]",0)->plaintext;
