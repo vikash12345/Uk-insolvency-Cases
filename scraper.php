@@ -39,10 +39,7 @@ require 'scraperwiki/simple_html_dom.php';
 		if ($Html) {
 
 			foreach ($Html->find("//*[@id='MyTable']/tbody") as $element) {
-				$RowNumb	+=	1;
-				if ($RowNumb != 0) {
-				echo $element	=	$element->find('./a', 0)->href;
-				}
+				echo $element;
 			}
 		}}
 	
