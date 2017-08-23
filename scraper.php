@@ -34,9 +34,17 @@ require 'scraperwiki/simple_html_dom.php';
 	for($page = 1; $page < 2; $page++){
 		$FinalURL	=	$site . $page .'&surnamesearch=A&forenamesearch=ALLFORENAMES&OPTION=NAME&tradingnamesearch=';
 		$Html		=	file_get_html($FinalURL);
-    echo 	$Html;
-		
+    		$RowNumb	=	-1;
+
+		if ($Html) {
+
+			foreach ($Html->find("//*[@id='MyTable']/tbody") as $element) {
+				$RowNumb	+=	1;
+				if ($RowNumb != 0) {
+				echo $Link	=	$element->find("//*[@id='navDet']/a", 0);
+				}
 			}
+		}
 	
 ?>
 
