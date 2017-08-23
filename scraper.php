@@ -45,30 +45,7 @@ require 'scraperwiki/simple_html_dom.php';
 					$newlink = 'https://www.insolvencydirect.bis.gov.uk/eiir/' . $Link;
 				$DetailPg				=	file_get_html($newlink);
 				echo $Surname  					= $DetailPg->find("/*[@id='frmCaseDetail']/table[2]/tbody/tr[1]td[2]",0)->plaintext;;
-				echo $Forename  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[2]td[2]",0)->plaintext;;
-				echo $Title 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[3]td[2]",0)->plaintext;;
-				echo $Gender  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[4]td[2]",0)->plaintext;;
-				echo $Occupation 					= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[5]td[2]",0)->plaintext;;
-				echo $DOB  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[6]td[2]",0)->plaintext;;
-				echo $Last_Known_Address  				= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[7]td[2]",0)->plaintext;
-				echo $Case_Name  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[1]td[2]",0)->plaintext;
-				echo $Court  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[2]td[2]",0)->plaintext;
-				echo $Type  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[4]td[2]",0)->plaintext;
-				echo $Number  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[5]td[2]",0)->plaintext;
-				echo $Case_Year  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[6]td[2]",0)->plaintext;
-				echo $Order_Date  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[7]td[2]",0)->plaintext;
-				echo $Status 					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[8]td[2]",0)->plaintext;
-				echo $Case_Description  				= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[9]td[2]",0)->plaintext;
-				echo $Main_Insolvency_Practitioner	  		= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[12]td[2]",0)->plaintext;
-				echo $Firm						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[13]td[2]",0)->plaintext;
-				echo $Address  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[14]td[2]",0)->plaintext;
-				echo $Post_Code  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[15]td[2]",0)->plaintext;
-				echo $Telephone  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[16]td[2]",0)->plaintext;
-				echo $Insolvency_Service_Office  			= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[19]td[2]",0)->plaintext;
-				echo $Contact  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[20]td[2]",0)->plaintext;
-				echo $Address2  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[21]td[2]",0)->plaintext;
-				echo $Post_Code2 					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[22]td[2]",0)->plaintext;
-				echo $Telephone2  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[23]td[2]",0)->plaintext;
+				
 					
 					
 					
