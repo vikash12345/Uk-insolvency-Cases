@@ -41,10 +41,10 @@ require 'scraperwiki/simple_html_dom.php';
 			foreach ($Html->find("//*[@id='MyTable']/tbody/tr") as $element) {
 				$RowNumb	+=	1;
 				if ($RowNumb != 0) {
-					echo $Link	=	$element->find('a[id="navDet"]', 0)->href;
+					$Link	=	$element->find('a[id="navDet"]', 0)->href;
 					$newlink = 'https://www.insolvencydirect.bis.gov.uk/eiir/' . $Link;
 					$DetailPg	=	file_get_html($newlink);
-					echo $surname  = $DetailPg->find("/*[@id='frmCaseDetail']/table[2]/tbody/tr[1]/td[2]",0);
+					echo $surname  = $DetailPg->find("/*[@id='frmCaseDetail']/table[2]/tbody/tr[1]/td[2]",0)->plaintext;
 				}
 			}
 		}}
