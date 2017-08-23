@@ -44,7 +44,7 @@ require 'scraperwiki/simple_html_dom.php';
 				 $info['Telephone2']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[21]/td[2]",0)->plaintext;
 						
 						scraperwiki::save_sqlite(array('name'), array('name' => $info['Surname'], 
-													'Forename'=> $info['Forename'] , 
+													'Forename'=> $info['Forename'], 
 													'Title' => $info['Title'] 
 													/*'Gender' => $info['Gender'], 
 													'Occupation' => $info['Occupation'], 
