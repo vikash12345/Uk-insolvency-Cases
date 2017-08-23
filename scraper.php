@@ -17,57 +17,57 @@ require 'scraperwiki/simple_html_dom.php';
 				$Link	=	$element->find('a[id="navDet"]', 0)->href;
 				$newlink = 'https://www.insolvencydirect.bis.gov.uk/eiir/' . $Link;
 				$DetailPg				=	file_get_html($newlink);
-				 echo $info['Surname']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[1]/td[2]",0)->plaintext;				
-				 $info['Forename']  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[2]/td[2]",0)->plaintext;
-				 $info['Title'] 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[3]/td[2]",0)->plaintext;
-				 $info['Gender']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[4]/td[2]",0)->plaintext;
-				 $info['Occupation'] 					= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[5]/td[2]",0)->plaintext;
-				 $info['DOB']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[6]/td[2]",0)->plaintext;
-				 $info['Last_Known_Address']  				= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[7]/td[2]",0)->plaintext;
-				 $info['Case_Name']  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[1]/td[2]",0)->plaintext;
-				 $info['Court']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[2]/td[2]",0)->plaintext;
-				 $info['Type']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[4]/td[2]",0)->plaintext;
-				 $info['Number'] 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[5]/td[2]",0)->plaintext;
-				 $info['Case_Year']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[6]/td[2]",0)->plaintext;
-				 $info['Order_Date']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[7]/td[2]",0)->plaintext;
-				 $info['Status'] 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[8]/td[2]",0)->plaintext;
-				 $info['Case_Description']  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[9]/td[2]",0)->plaintext;
-				 $info['Main_Insolvency_Practitioner']	  			= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[10]/td[2]",0)->plaintext;
-				 $info['Firm']							= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[11]/td[2]",0)->plaintext;
-				 $info['Address']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[12]/td[2]",0)->plaintext;
-				 $info['Post_Code']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[13]/td[2]",0)->plaintext;
-				 $info['Telephone']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[14]/td[2]",0)->plaintext;
-				 $info['Insolvency_Service_Office']  				= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[17]/td[2]",0)->plaintext;
-				 $info['Contact']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[18]/td[2]",0)->plaintext;
-				 $info['Address2']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[19]/td[2]",0)->plaintext;
-				 $info['Post_Code2'] 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[20]/td[2]",0)->plaintext;
-				 $info['Telephone2']  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[21]/td[2]",0)->plaintext;
+				 $Surname  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[1]/td[2]",0)->plaintext;				
+				 $Forename  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[2]/td[2]",0)->plaintext;
+				 $Title 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[3]/td[2]",0)->plaintext;
+				 $Gender  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[4]/td[2]",0)->plaintext;
+				 $Occupation 					= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[5]/td[2]",0)->plaintext;
+				 $DOB  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[6]/td[2]",0)->plaintext;
+				 $Last_Known_Address  				= $DetailPg->find("//*[@id='frmCaseDetail']/table[2]/tbody/tr[7]/td[2]",0)->plaintext;
+				 $Case_Name']  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[1]/td[2]",0)->plaintext;
+				 $Court  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[2]/td[2]",0)->plaintext;
+				 $Type  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[4]/td[2]",0)->plaintext;
+				 $Number 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[5]/td[2]",0)->plaintext;
+				 $Case_Year  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[6]/td[2]",0)->plaintext;
+				 $Order_Date  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[7]/td[2]",0)->plaintext;
+				 $Status 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[8]/td[2]",0)->plaintext;
+				 $Case_Description  					= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[9]/td[2]",0)->plaintext;
+				 $Main_Insolvency_Practitioner	  			= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[10]/td[2]",0)->plaintext;
+				 $Firm							= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[11]/td[2]",0)->plaintext;
+				 $Address  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[12]/td[2]",0)->plaintext;
+				 $Post_Code  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[13]/td[2]",0)->plaintext;
+				 $Telephone  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[14]/td[2]",0)->plaintext;
+				 $Insolvency_Service_Office  				= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[17]/td[2]",0)->plaintext;
+				 $Contact  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[18]/td[2]",0)->plaintext;
+				 $Address2  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[19]/td[2]",0)->plaintext;
+				 $Post_Code2 						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[20]/td[2]",0)->plaintext;
+				 $Telephone2  						= $DetailPg->find("//*[@id='frmCaseDetail']/table[3]/tbody/tr[21]/td[2]",0)->plaintext;
 						
-						scraperwiki::save_sqlite(array('name'), array('name' => $info['Surname'], 
-													'Forename'=> $info['Forename'], 
-													'Title' => $info['Title'] 
-													/*'Gender' => $info['Gender'], 
-													'Occupation' => $info['Occupation'], 
-													'DOB'=> $info['DOB'], 
-													'Last_Known_Address' => $info['Last_Known_Address'], 
-													'Case_Name'=> $info['Case_Name'], 
-													'Court' => $info['Court'], 
-													'Type' => $info['Type'], 
-													'Number' => $info['Number'],
-													'Case_Year' => $info['Case_Year'], 
-													'Order_Date' => $info['Order_Date'], 
-													'Status' => $info['Status'], 
-													'Case_Description' => $info['Case_Description'], 
-													'Main_Insolvency_Practitioner' => $info['Main_Insolvency_Practitioner'], 
-													'Firm' => $info['Firm'], 
-													'Address'=> $info['Address'], 
-													'Post_Code' => $info['Post_Code'], 
-													'Telephone' => $info['Telephone'], 
-													'Insolvency_Service_Office'=> $info['Insolvency_Service_Office'],
-													'Contact' => $info['Contact'], 
-													'Address2'=> $info['Address2'],
-													'Post_Code2' => $info['Post_Code2'],													
-													'Telephone2' => $info['Telephone2'] */
+						scraperwiki::save_sqlite(array('name'), array('name' => $Surname, 
+													'Forename'=> $Forename, 
+													'Title' => $Title 
+													'Gender' => $Gender, 
+													'Occupation' => $Occupation, 
+													'DOB'=> $DOB, 
+													'Last_Known_Address' => $Last_Known_Address, 
+													'Case_Name'=> $Case_Name, 
+													'Court' => $Court, 
+													'Type' => $Type, 
+													'Number' => $Number,
+													'Case_Year' => $Case_Year, 
+													'Order_Date' => $Order_Date, 
+													'Status' => $Status, 
+													'Case_Description' => $Case_Description, 
+													'Main_Insolvency_Practitioner' => $Main_Insolvency_Practitioner, 
+													'Firm' => $Firm, 
+													'Address'=> $Address, 
+													'Post_Code' => $Post_Code, 
+													'Telephone' => $Telephone, 
+													'Insolvency_Service_Office'=> $Insolvency_Service_Office,
+													'Contact' => $Contact, 
+													'Address2'=> $Address2,
+													'Post_Code2' => $Post_Code2,													
+													'Telephone2' => $Telephone2 
 													));
 
     
