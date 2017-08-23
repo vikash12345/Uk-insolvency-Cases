@@ -72,7 +72,6 @@ require 'scraperwiki/simple_html_dom.php';
 
     
   //clean out the dom
- $DetailPg->__destruct();		
 					
 
 				}
