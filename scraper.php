@@ -82,7 +82,7 @@ require 'scraperwiki/simple_html_dom.php';
 													Court => $info['Court'], 
 													Type => $info['Type'], 
 													Number => $info['Number'] 
-													Case_Year => $info['Case_Year'], 
+													CaseY => $info['Case_Year'], 
 													Order_Date => $info['Order_Date'], 
 													Status => $info['Status'], 
 													Case_Description => $info['Case_Description'], 
