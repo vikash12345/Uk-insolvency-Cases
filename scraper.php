@@ -72,7 +72,7 @@ require 'scraperwiki/simple_html_dom.php';
 					
 					
 					
-scraperwiki::save_sqlite(array('Tel','Telephone2'), 
+echo scraperwiki::save_sqlite(array('Tel','Telephone2'), 
     array('Telephone2' => Surname, 
           'Surname' => (trim($Surname)), 
           'Forename' => (trim($Forename)),
