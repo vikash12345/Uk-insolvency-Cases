@@ -7,7 +7,8 @@ require 'scraperwiki/simple_html_dom.php';
 	for($page = 1; $page < 2; $page++){
 		$FinalURL	=	$site . $page .'&surnamesearch=A&forenamesearch=ALLFORENAMES&OPTION=NAME&tradingnamesearch=';
 		$Html		=	file_get_html($FinalURL);
-    		$Flag	=	-1;
+		echo $Html;
+    		/*$Flag	=	-1;
 
 		if ($Html) {
 
@@ -77,7 +78,9 @@ require 'scraperwiki/simple_html_dom.php';
 				}
 			
 			}
-		}}
+		}*/
+		
+		}
 	
 ?>
 
